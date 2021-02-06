@@ -1,0 +1,180 @@
+{
+    "pages": [
+        {
+            "number": 92,
+            "pov": "omniscient",
+            "timePlace": "London, 1944",
+            "povTransition": false,
+            "timeSpaceTransition": false,
+            "details": "We begin with a weird description of woman's outfit."
+        },
+        {
+            "number": 93,
+            "pov": "Omniscient",
+            "timePlace": "London, 1944",
+            "povTransition": false,
+            "timeSpaceTransition": false,
+            "details": "Continues relatively detached third-person narration, with brief dips into Osbie Feel's perspective. \"a smile she means to be friendly but which to Osbie feels terribly workly, sophisticated, wicked.\"."
+        },
+        {
+            "number": 94,
+            "pov": "Katje",
+            "timePlace": "Germany, 194?",
+            "povTransition": true,
+            "timeSpaceTransition": true,
+            "details": "The oven in the mainsonette (i.e., a two-story apartment with a dedicated front door) pulls us into Katje's perspective and her memories of captivity under Captain Blicero's command."
+        },
+        {
+            "number": 95,
+            "pov": "Katje",
+            "timePlace": "Germany, 194?",
+            "povTransition": false,
+            "timeSpaceTransition": false,
+            "details": "Description of Katje and her fellow captive Gottfried's duties while held by Blicero."
+        },
+        {
+            "number": 96,
+            "pov": "Katje",
+            "timePlace": "Germany, 194?",
+            "povTransition": false,
+            "timeSpaceTransition": false,
+            "details": "Narrator pulls away from Katje's perspective slightly and assumes a more neutral tone."
+        },
+        {
+            "number": 97,
+            "pov": "Bicero",
+            "timePlace": "Germany, 194?",
+            "povTransition": true,
+            "timeSpaceTransition": false,
+            "details": "The less-yoked narrative voice of the prior page morphs into Blicero's perspective (\"Captain Blicero can't be sure. Up to a point he finds the agony delightful.\")."
+        },
+        {
+            "number": 98,
+            "pov": "Bicero",
+            "timePlace": "Südwest, 193?",
+            "povTransition": false,
+            "timeSpaceTransition": false,
+            "details": "Continues Blicero's story."
+        },
+        {
+            "number": 99,
+            "pov": "Bicero",
+            "timePlace": "Südwest, 193?",
+            "povTransition": false,
+            "timeSpaceTransition": true,
+            "details": "Narrator pulls reader out of Germany into Blicero's memories of his time in \"the Südwest\" (i.e., present-day Namibia)."
+        },
+        {
+            "number": 100,
+            "pov": "Bicero",
+            "timePlace": "Südwest, 193?",
+            "povTransition": false,
+            "timeSpaceTransition": false,
+            "details": "Continues Blicero's Südwest memories."
+        },
+        {
+            "number": 101,
+            "pov": "Bicero",
+            "timePlace": "Germany, 194?",
+            "povTransition": false,
+            "timeSpaceTransition": true,
+            "details": "Return to Germany in the 1940s."
+        },
+        {
+            "number": 102,
+            "pov": "Gottfried",
+            "timePlace": "Germany, 194?",
+            "povTransition": true,
+            "timeSpaceTransition": false,
+            "details": "Captivity under Blicero from Gottfried's perspective."
+        },
+        {
+            "number": 103,
+            "pov": "Gottfried",
+            "timePlace": "Germany, 194?",
+            "povTransition": false,
+            "timeSpaceTransition": false,
+            "details": "Continue Gottfried's perspective."
+        },
+        {
+            "number": 104,
+            "pov": "Omniscient",
+            "timePlace": "Germany, 194?",
+            "povTransition": true,
+            "timeSpaceTransition": false,
+            "details": "Katje's escape from omniscient perspective."
+        },
+        {
+            "number": 105,
+            "pov": "Omniscient",
+            "timePlace": "Germany, 194?",
+            "povTransition": false,
+            "timeSpaceTransition": false,
+            "details": "Continues Katje's escape to England from omniscient perspective."
+        },
+        {
+            "number": 106,
+            "pov": "Pirate",
+            "timePlace": "London, 1944",
+            "povTransition": true,
+            "timeSpaceTransition": true,
+            "details": "Katje's escape narrative morphs into a conversation between Pirate Prentice and Osbie Feel in London."
+        },
+        {
+            "number": 107,
+            "pov": "Pirate",
+            "timePlace": "London, 1944",
+            "povTransition": false,
+            "timeSpaceTransition": false,
+            "details": "Continues Pirate and Osbie's conversation, with appearance of Katje from Pirate's perspective."
+        },
+        {
+            "number": 108,
+            "pov": "Omniscient",
+            "timePlace": "Dutch West Indies, 17th century",
+            "povTransition": true,
+            "timeSpaceTransition": true,
+            "details": "Abrupt cut to the story of Katje's ancestor Frans Van der Groov and his quest to kill the last living dodo."
+        },
+        {
+            "number": 109,
+            "pov": "Omniscient",
+            "timePlace": "Dutch West Indies, 17th century",
+            "povTransition": false,
+            "timeSpaceTransition": false,
+            "details": "Continues Frans Van der Groov's story."
+        },
+        {
+            "number": 110,
+            "pov": "Omniscient",
+            "timePlace": "Dutch West Indies, 17th century",
+            "povTransition": false,
+            "timeSpaceTransition": false,
+            "details": "Continues Frans Van der Groov's story."
+        },
+        {
+            "number": 111,
+            "pov": "Omniscient",
+            "timePlace": "Dutch West Indies, 17th century",
+            "povTransition": false,
+            "timeSpaceTransition": false,
+            "details": "Continues Frans Van der Groov's story."
+        },
+        {
+            "number": 112,
+            "pov": "Pirate",
+            "timePlace": "London, 1944",
+            "povTransition": true,
+            "timeSpaceTransition": true,
+            "details": "Abrupt transition back to Pirate and Osbie conversing in London, 1944."
+        },
+        {
+            "number": 112,
+            "pov": "Pirate",
+            "timePlace": "London, 1944",
+            "povTransition": false,
+            "timeSpaceTransition": false,
+            "details": "Chapter ends where it started: Katje being filmed in order to psychologically condition Grigori, a giant octopus."
+        }
+    ]
+}

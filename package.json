@@ -1,0 +1,6 @@
+{
+  "name": "gr-structural-models",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
