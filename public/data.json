@@ -42,7 +42,7 @@
         },
         {
             "number": 97,
-            "pov": "Bicero",
+            "pov": "Blicero",
             "timePlace": "Germany, 194?",
             "povTransition": true,
             "timeSpaceTransition": false,
@@ -50,7 +50,7 @@
         },
         {
             "number": 98,
-            "pov": "Bicero",
+            "pov": "Blicero",
             "timePlace": "Südwest, 193?",
             "povTransition": false,
             "timeSpaceTransition": false,
@@ -58,7 +58,7 @@
         },
         {
             "number": 99,
-            "pov": "Bicero",
+            "pov": "Blicero",
             "timePlace": "Südwest, 193?",
             "povTransition": false,
             "timeSpaceTransition": true,
@@ -66,7 +66,7 @@
         },
         {
             "number": 100,
-            "pov": "Bicero",
+            "pov": "Blicero",
             "timePlace": "Südwest, 193?",
             "povTransition": false,
             "timeSpaceTransition": false,
@@ -74,7 +74,7 @@
         },
         {
             "number": 101,
-            "pov": "Bicero",
+            "pov": "Blicero",
             "timePlace": "Germany, 194?",
             "povTransition": false,
             "timeSpaceTransition": true,
