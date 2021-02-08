@@ -44,6 +44,10 @@ const app = (function(d3) {
       .attr('class', 'axis')
       .attr('transform', `translate(0, 0)`)
 
+    const tooltip = d3.select('body').append('div')
+      .attr('class', 'tooltip')
+      .style('opacity', 0);
+
     svg.selectAll('.bar')
       .data(data)
     .enter().append('rect')
@@ -52,7 +56,26 @@ const app = (function(d3) {
       .attr('width', width / data.length + 2) // TODO no magic number
       .attr('y', (d) => yScale(d.timePlace))
       .attr('height', yScale.bandwidth())
+      .on('mouseover', (event, d) => {
+        const height = d.details.length > 75 ? `${d.details.length}px` : '75px';
+        const width = d.details.length > 200 ? `${d.details.length}px` : '200px';
 
+        tooltip.transition()
+          .duration(200)
+          .style('opacity', 1);
+          tooltip.html(d.details)
+          .style('left', (event.pageX) + 'px')
+          .style('top', (event.pageY - 28) + 'px')
+          .style('height', height)
+          .style('width', width)
+        })
+      .on('mouseout', function(d) {
+        tooltip.transition()
+          .duration(500)
+          .style('opacity', 0);
+        });
+ 
+            
   }
   
   d3.json('/data.json').then(data => render(data.pages));

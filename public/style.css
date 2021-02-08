@@ -21,3 +21,15 @@
 .axis {
   font-size: 1em;
 }
+
+div.tooltip {
+  background: grey;
+  border: 0px;
+  border-radius: 8px;
+  color: white;
+  font: 16px sans-serif;
+  padding: 2px;
+  pointer-events: none;
+  position: absolute;
+  text-align: left;
+}
