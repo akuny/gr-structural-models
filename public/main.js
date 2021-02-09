@@ -1,26 +1,38 @@
 const app = (function(d3) {
 
   const margin = {
-    top: 50, 
+    top: 20, 
     right: 50, 
-    bottom: 50, 
+    bottom: 20, 
     left: 250
   };
 
   const width = 1200 - margin.left - margin.right;
   const height = 400 - margin.top - margin.bottom;
 
-  const svg = d3.select('#root')
+  function handlePageClick(event, d) {
+
+    document.getElementById('details').innerHTML = d.details;
+    const activePages = document.querySelectorAll('.active-page');
+    if (activePages.length > 0) {
+      activePages.forEach((node, i) => node.classList.toggle('active-page'))
+    }
+    event.target.classList.toggle('active-page');
+
+  }
+
+  function render(data) {
+    d3.select('#root').selectAll('*').remove();
+
+    const svg = d3.select('#root')
     .append('svg')
       .attr('width', width + margin.left + margin.right)
       .attr('height', height + margin.top + margin.bottom)
     .append('g')
       .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
-  const render = (data) => {
-
     const xScale = d3.scaleLinear()
-      .domain([d3.min(data, (d) => d.number), d3.max(data, (d) => d.number)])
+      .domain([d3.min(data, (d) => d.number), d3.max(data, (d) => d.number) + 1])
       .range([0, width])
 
     const yScale = d3.scaleBand()
@@ -42,42 +54,31 @@ const app = (function(d3) {
     svg.append('g')
       .call(yAxis)
       .attr('class', 'axis')
-      .attr('transform', `translate(0, 0)`)
+      .attr('transform', 'translate(0, 0)')
 
-    const tooltip = d3.select('body').append('div')
-      .attr('class', 'tooltip')
-      .style('opacity', 0);
-
-    svg.selectAll('.bar')
+    svg.selectAll()
       .data(data)
     .enter().append('rect')
       .attr('class', (d) => d.pov)
       .attr('x', (d) => xScale(d.number))
-      .attr('width', width / data.length + 2) // TODO no magic number
+      .attr('width', width / data.length * 0.85) // TODO no magic number
       .attr('y', (d) => yScale(d.timePlace))
       .attr('height', yScale.bandwidth())
+      .on('click', handlePageClick)
       .on('mouseover', (event, d) => {
-        const height = d.details.length > 75 ? `${d.details.length}px` : '75px';
-        const width = d.details.length > 200 ? `${d.details.length}px` : '200px';
+        event.target.style.cursor = 'pointer';
+      })
 
-        tooltip.transition()
-          .duration(200)
-          .style('opacity', 1);
-          tooltip.html(d.details)
-          .style('left', (event.pageX) + 'px')
-          .style('top', (event.pageY - 28) + 'px')
-          .style('height', height)
-          .style('width', width)
-        })
-      .on('mouseout', function(d) {
-        tooltip.transition()
-          .duration(500)
-          .style('opacity', 0);
-        });
- 
-            
   }
-  
-  d3.json('/data.json').then(data => render(data.pages));
 
+  document.querySelectorAll('.dropdown-item').forEach((node, i) => {
+    node.addEventListener('click', (event) => {
+      const selectedOption = event.target.hash.substr(1);
+      d3.json(`/data/${selectedOption}.json`).then(data => {
+        document.getElementById('chartTitle').innerHTML = data.title;
+        return render(data.pages);
+      });
+    });
+  });
+  
 })(d3);

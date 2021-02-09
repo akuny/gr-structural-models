@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gravity's Rainbow Structural Visualizations</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.css">
+    <script src="https://kit.fontawesome.com/fa7a26a2db.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,26 +15,52 @@
             <h2 class="subtitle">Looping chapters</h2>    
         </div>
         <div class="columns">
-            <div class="column is-one-quarter">
-                <aside class="menu">
-                    <ul class="menu-list">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Models</a>
-                            <ul>
-                                <li><a>Part 1, Section 5</a></li>
-                                <li><a>Part 1, Section 14</a></li>
-                            </ul>
-                        </li>
-                    </ul>     
-                </aside>
+            <div class="column">
+                <div class="dropdown">
+                    <div class="dropdown-trigger">
+                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span>Pick a section</span>
+                        <span class="icon is-small">
+                          <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                      <div class="dropdown-content">
+                        <a href="#part1section5" class="dropdown-item">
+                          Part 1, section 5
+                        </a>
+                        <a href="#part1section14" class="dropdown-item">
+                          Part 1, section 14
+                        </a>
+                      </div>
+                    </div>
+                </div>
             </div>
             <div class="column">
-                <div id="root"></div>
+                <section class="section">
+                    <h2 id="chartTitle" class="title"></h2>
+                    <div id="root"></div>
+                </section>
+                <section class="section">
+                    <div class="block">
+                          <div id="details" class="content">
+                              
+                          </div>
+                      </div>
+                </section>
             </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.5.0/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-dsv/1.0.8/d3-dsv.min.js"></script>
     <script src="/main.js"></script>
+    <script>
+        const dropdown = document.querySelector('.dropdown');
+        dropdown.addEventListener('click', (event) => {
+            event.stopPropagation();
+            dropdown.classList.toggle('is-active');
+        });
+    </script>
 </body>
 </html>
